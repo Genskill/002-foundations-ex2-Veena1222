@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <cs50.h>
-
 int main(void)
 {
   int choice=get_int("Enter type of pattern (1 or 2) ");

@@ -1,27 +1,38 @@
-#include<stdio.h>
-#include<cs50.h>
-int main()
+#include <stdio.h>
+#include <cs50.h>
+int main(void)
 {
-  int pattern = get_pattern("Enter type of pattern");
-  int row = get_pattern("Enter number of rows");
-  int i,c;
-  if(pattern==1)
+  int choice=get_int("Enter type of pattern (1 or 2) ");
+  int r=get_int("Number of rows");
+  if(choice==1)
   {
-  for(i=1;i<=row;i++)
-  {
-    for(c=1;c<=i;c++)
+    for(int i=r;i>0;i--)
     {
-      printf("# \n");
-    }
-  }}
-  else
-  {
-    for(i=row;i>=1;i--)
-    {
-      for(c=row;c<=i-1;c--)
+      for(int j=0;j<i;j++)
       {
-        printf("# \n");
+        printf("#");
       }
-    }}
-  return 0;
+      printf("\n");
+    }
+  }
+  else if(choice==2)
+  {
+    for(int i=r;i>0;i--)
+    {
+      for(int j=0;j<r;j++)
+      {
+        if(j>=i-1)
+        {
+          printf("#");
+        }
+        else
+          printf(" ");
+      }
+      printf("\n");
+    }
+  }
 }
+
+
+
+

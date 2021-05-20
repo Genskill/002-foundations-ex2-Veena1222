@@ -1,6 +1,5 @@
 #include<stdio.h>
 #include<cs50.h>
-
 int main(void)
 {
   float a= get_float("side 1 \n");

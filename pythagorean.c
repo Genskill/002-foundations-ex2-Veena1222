@@ -28,8 +28,7 @@ int main(void)
       printf("No");
     }
 
-};
-  
+}
   
 
   
